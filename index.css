@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shadcn-compatible CSS variables for dark theme */
+@layer base {
+  :root {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --card: 224 71% 6%;
+    --card-foreground: 213 31% 91%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+    --primary: 187 95% 53%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --ring: 187 95% 53%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .input {
+    @apply bg-[#0e1530] border border-[#1f2a4d] rounded-md px-3 py-2 text-sm text-slate-100 outline-none focus:border-cyan-400 transition;
+  }
+  .select {
+    @apply bg-[#0e1530] border border-[#1f2a4d] rounded-md px-3 py-2 text-sm text-slate-100 outline-none focus:border-cyan-400 transition;
+  }
+  .btn-primary {
+    @apply bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-4 py-2 rounded-md text-sm transition disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-[#152150] hover:bg-[#1a2960] text-cyan-300 px-4 py-2 rounded-md text-sm transition disabled:opacity-50;
+  }
+  .btn-buy {
+    @apply bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-semibold px-4 py-2 rounded-md text-sm transition;
+  }
+  .btn-sell {
+    @apply bg-rose-500 hover:bg-rose-400 text-slate-50 font-semibold px-4 py-2 rounded-md text-sm transition;
+  }
+}
